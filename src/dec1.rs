@@ -32,10 +32,18 @@ fn convert_strings(filename: String) -> Vec<i32> {
 }
 
 fn main() {
-    //let depths: Vec<i32> = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263].to_vec();
-
     let arr = convert_strings("data/depths.txt".to_string());
-    //let depth_increases = find_depth_increases(depths);
     let depth_increases = find_depth_increases(arr);
     println!("{} depth increases", depth_increases);
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_find_depth_increases() {
+        let depths: Vec<i32> = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263].to_vec();
+        assert_eq!(find_depth_increases(depths), 7);
+    }
 }
