@@ -15,7 +15,7 @@ fn find_depth_increases(input: Vec<i32>) -> i32 {
 }
 
 fn convert_strings(filename: String) -> Vec<i32> {
-    let input = fs::read(filename).expect("Faild to read file");
+    let input = fs::read(filename).expect("Failed to read file");
     let depths = String::from_utf8(input).unwrap();
     let split: Vec<&str> = depths.split('\n').filter(|s| !s.is_empty()).collect();
     let mut output: Vec<i32> = Vec::new();
