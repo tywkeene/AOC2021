@@ -69,6 +69,7 @@ fn main() {
 mod tests {
     use super::*;
 
+    /*
     fn vectors_eq<T: PartialEq>(a: &Vec<T>, b: &Vec<T>) -> bool {
         let matching = a.iter().zip(b.iter()).filter(|&(a, b)| a == b).count();
         matching == a.len() && matching == b.len()
@@ -81,6 +82,7 @@ mod tests {
 
         assert_eq!(vectors_eq(&depths, &sums), true);
     }
+    */
 
     #[test]
     fn test_find_depth_increases_window() {

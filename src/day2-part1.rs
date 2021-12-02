@@ -41,7 +41,6 @@ fn read_command_file(filename: String) -> Vec<Command> {
     output
 }
 
-
 fn eval_commands(vec: Vec<Command>) -> i32 {
     let mut horizontal_pos: i32 = 0;
     let mut depth: i32 = 0;
@@ -60,7 +59,6 @@ fn eval_commands(vec: Vec<Command>) -> i32 {
 
 fn main(){
     let commands = read_command_file("data/commands.txt".to_string());
-
     let final_pos: i32 = eval_commands(commands);
     println!("Final position: {}", final_pos);
 }
